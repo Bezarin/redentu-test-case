@@ -18,6 +18,12 @@ class Product extends Model
         'is_available',
     ];
 
+    protected $casts = [
+        'price_uah' => 'decimal:2',
+        'warranty_months' => 'integer',
+        'is_available' => 'boolean',
+    ];
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
