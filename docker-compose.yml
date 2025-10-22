@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: redentu
+      POSTGRES_USER: redentu
+      POSTGRES_PASSWORD: redentu
+    ports: ["5432:5432"]
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+volumes:
+  dbdata:
